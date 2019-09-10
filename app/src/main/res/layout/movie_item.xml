@@ -5,15 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/textView_url"
+    <ImageView
+        android:id="@+id/imageView_cover"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Olá Mundo!"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/white"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="h,9:16"
+        android:src="@drawable/movie"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
