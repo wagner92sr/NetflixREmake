@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context=".MovieActivity">
 
     <ImageView
@@ -40,15 +41,74 @@
         android:src="@drawable/ic_play_arrow_24dp"/>
 
     <TextView
+        android:id="@+id/text_view_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="22dp"
-        android:text="Text View"
-        android:textStyle="bold"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="@id/imageView_cover"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Text View" />
+
+    <TextView
+        android:id="@+id/text_view_desc"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView_cover"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="48dp"
+        android:maxLines="3"
+        android:lineSpacingExtra="2sp"
+        android:ellipsize="end"
+        android:textSize="14dp"
+        android:textColor="@color/colorGrayLighter"
+        android:layout_height="wrap_content"
+        tools:text="Super Heroes amass to stop tatatatatatatttttttttttttttttttttfafsafasfafaasfasttttter Heroes amass to stop tatatatatatatttttttttttttttttttttfafsafasfafaasfastttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt"/>
+
+    <TextView
+        android:id="@+id/text_view_cast"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_desc"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="48dp"
+        android:maxLines="3"
+        android:lineSpacingExtra="2sp"
+        android:ellipsize="end"
+        android:textSize="14dp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_height="wrap_content"
+        tools:text="Super Heroes amass to stop tatatatatatatttttttttttttttttttttfafsafasfafaasfasttttter Heroes amass to stop tatatatatatatttttttttttttttttttttfafsafasfafaasfastttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt"/>
+
+    <TextView
+        android:id="@+id/text_view_semelhantes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/similar"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_cast"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_similar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        tools:layout_constraintTop_toBottomOf="@id/text_view_semelhantes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
