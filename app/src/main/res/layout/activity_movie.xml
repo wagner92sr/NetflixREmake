@@ -108,7 +108,8 @@
         tools:layout_constraintTop_toBottomOf="@id/text_view_semelhantes"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/movie_item_similar"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

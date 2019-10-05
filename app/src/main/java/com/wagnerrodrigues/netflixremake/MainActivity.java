@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(@NonNull MovieHolder holder, int position) {
             Movie movie = movies.get(position);
-            //holder.imageViewCover.setImageResource(movie.getCoverUrl());
+            holder.imageViewCover.setImageResource(movie.getCoverUrl());
 
         }
 
