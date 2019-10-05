@@ -60,8 +60,8 @@ public class MovieActivity extends AppCompatActivity {
         txtCast.setText(getString(R.string.cast, "Wagner" + ",Teste" + ",teste" + ",teste"));
 
         List<Movie> movies = new ArrayList<>();
-        for(int i=0; i<30; i++){
-            Movie movie = new Movie();
+        for(int i = 0; i<  30; i++){
+            Movie movie =  new Movie();
             movies.add(movie);
         }
 
@@ -99,7 +99,7 @@ public class MovieActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(@NonNull MovieHolder holder, int position) {
             Movie movie = movies.get(position);
-            //holder.imageViewCover.setImageResource(movie.getCoverUrl());
+            holder.imageViewCover.setImageResource(movie.getCoverUrl());
 
         }
 
